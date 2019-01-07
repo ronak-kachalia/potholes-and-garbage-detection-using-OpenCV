@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/preview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    ><!-- For Camera-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:background="@drawable/shutterr"
+            android:id="@+id/button_capture"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="40dp"
+            /><!-- Click Button-->
+        <Button
+            android:background="@drawable/flashoff"
+            android:id="@+id/Flash"
+            android:onClick="flash"
+            android:layout_marginLeft="25dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/button_capture"
+            /><!-- FlashButton-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/angle_show"
+            >
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:id="@+id/angles"
+                android:text="Angle:"
+                android:textColor="#689F38"
+                android:alpha="1"
+                android:textSize="20dp"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:layout_height="80dp"
+                android:layout_width="wrap_content"
+                android:id="@+id/angle2"
+                android:layout_centerInParent="true"
+                android:textColor="#689F38"
+                android:rotation="90"
+                android:layout_alignParentRight="true"
+                android:textSize="20dp"
+                android:text="Angle:"
+                android:layout_marginRight="0dp"/>
+
+        </RelativeLayout><!--Layout for angles-->
+        <TextView
+            android:id="@+id/borders"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/saveretake"
+            android:layout_height="87dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            <EditText
+                android:background="#000000"
+                android:alpha="0.5"
+                android:id="@+id/input"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Add description...."
+                android:layout_alignParentBottom="true"
+                android:textColorHint="#FFFFFF"
+                android:textColor="#FFFFFF"
+                /><!-- Description -->
+
+            <RelativeLayout
+                android:id="@+id/retakesave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:alpha="0.5"
+                android:layout_marginBottom="39dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+                <Button
+                    android:id="@+id/Retake"
+                    android:layout_marginLeft="26dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/clear_white" />
+                <Button
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="26dp"
+                    android:id="@+id/save"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/file_upload"
+                    />
+
+            </RelativeLayout>
+        </RelativeLayout><!--Layout for borders-->
+        <!-- For save and retake button-->
+    </RelativeLayout>
+
+</FrameLayout>
